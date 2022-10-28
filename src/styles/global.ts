@@ -22,7 +22,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: 'Inter', serif;   
+    font-family:  'Inter', serif;   
     background: ${({ theme }) => theme.colors.black["1000"]};
     color: ${({ theme }) => theme.colors.black["200"]};
   }
