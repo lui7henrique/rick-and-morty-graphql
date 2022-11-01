@@ -1,23 +1,14 @@
-import { useCallback, useEffect } from "react";
-import { client } from "../graphql/client";
-import { GetCharacterQuery } from "../graphql/generated/graphql";
-import { GET_CHARACTER } from "../graphql/queries";
+import Head from "next/head";
+import { HomeTemplate } from "templates/Home";
 
 export default function Home() {
-  const fetchCharacters = useCallback(async () => {
-    const { data } = await client.query<GetCharacterQuery>({
-      query: GET_CHARACTER,
-    });
-  }, []);
-
-  useEffect(() => {
-    fetchCharacters();
-  }, [fetchCharacters]);
-
   return (
     <>
-      <h1>rick-and-morty</h1>
-      <p>graph-ql</p>
+      <Head>
+        <title>Rick and Morty | Home</title>
+      </Head>
+
+      <HomeTemplate />
     </>
   );
 }

@@ -13,6 +13,14 @@ export const GET_CHARACTER = gql`
         status
         image
         type
+        location {
+          name
+          dimension
+        }
+        origin {
+          name
+          dimension
+        }
       }
     }
   }

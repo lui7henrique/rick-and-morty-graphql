@@ -4,16 +4,23 @@ import { Limiter } from "../Limiter";
 export const Header = styled.header`
   width: 100%;
 
-  border-bottom-color: ${({ theme }) => theme.colors.black["800"]};
+  border-bottom-color: ${({ theme }) => theme.colors.black["700"]};
   border-bottom-width: 1px;
   border-bottom-style: solid;
+
+  height: ${({ theme }) => theme.sizes.header};
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 export const Container = styled(Limiter)`
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+  width: 100%;
+
   display: flex;
   justify-content: space-between;
+  align-items: center;
 `;
 
 export const Logo = styled.div`
